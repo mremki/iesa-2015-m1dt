@@ -5,10 +5,11 @@
 		<title>Api Géolocalisation</title>
 		<script>
 			function getCoords ( position ) {
-				var latitude = position.coords.latitude;
-				var longitude = position.coords.longitude;
-				var altitude = position.coords.altitude;
-				alert("latitude : " + latitude + ", longitude :" + longitude + ", altitude :" + altitude);
+				var geoInfos = "Mes positions :<br>";
+				geoInfos += "Latitude :" + position.coords.latitude + "<br>";
+				geoInfos += "Longitude :" + position.coords.longitude + "<br>";
+				geoInfos += "Altitude : " + position.coords.altitude + "<br>";
+				document.getElementById("geolocation").innerHTML = geoInfos;
 			}
 			
 			if ( navigator.geolocation ) {
@@ -20,7 +21,7 @@
 	</head>
 	<body>
 		<div id="geolocation">
-		
+		Zone présentant les informations de géolocation.
 		</div>
 	</body>
 </html>
