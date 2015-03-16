@@ -9,11 +9,14 @@
 				geoInfos += "Latitude :" + position.coords.latitude + "<br>";
 				geoInfos += "Longitude :" + position.coords.longitude + "<br>";
 				geoInfos += "Altitude : " + position.coords.altitude + "<br>";
+				if(position.coords.speed)
+					geoInfos +="Vitesse : " + position.coords.speed + "<br>";
 				document.getElementById("geolocation").innerHTML = geoInfos;
 			}
 			
 			if ( navigator.geolocation ) {
-				navigator.geolocation.getCurrentPosition(getCoords);
+			//		navigator.geolocation.getCurrentPosition(getCoords);
+					navigator.geolocation.watchPosition(getCoords);
 			} else {
 				alert("Votre Navigateur ne prend pas en compte la géolocation");
 			}
