@@ -4,15 +4,24 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Api Géolocalisation</title>
 		<script>
+			function getCoords ( position ) {
+				var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+				var altitude = position.coords.altitude;
+				alert("latitude : " + latitude + ", longitude :" + longitude + ", altitude :" + altitude);
+			}
+			
 			if ( navigator.geolocation ) {
-				alert("L\'Api de geolocation rn HTML5 est disponiblle");
-			}else {
+				navigator.geolocation.getCurrentPosition(getCoords);
+			} else {
 				alert("Votre Navigateur ne prend pas en compte la géolocation");
 			}
 		</script>
 	</head>
 	<body>
+		<div id="geolocation">
 		
+		</div>
 	</body>
 </html>
 	
