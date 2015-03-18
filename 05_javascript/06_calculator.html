@@ -7,28 +7,47 @@
 </head>
 <body>
 	<script>
-		var a = prompt('Donnez la valeur de X');
-		var b = prompt('Donnez la valeur de Y');
+		var n = prompt('Combien de parametre voulez vous ?');
+		var tabNbParam=new Array;
+		for (var i=1; i<=n ; i++){
+			tabNbParam[i-1] = prompt('Donnez la valeur ' + i);
+		}
 		
-		function add( x, y) {
-			return parseFloat(x)+parseFloat(y);
+		function add(tabNbParam) {
+			var x=0;
+			for (var i=0; i< n ; i++){
+				x += parseFloat(tabNbParam[i]);
+			}
+			return x;
 		}
-		function minus( x,  y) {
-			return x-y;
+		function minus(tabNbParam) {
+			var x=0;
+			for (var i=0; i< n ; i++){
+				x -= parseInt(tabNbParam[i]);
+			}
+			return x;
 		}
-		function multiply( x,  y) {
-			return x*y;
+		function multiply(tabNbParam) {
+			var x=0;
+			for (var i=0; i< n ; i++){
+				x *= parseFloat(tabNbParam[i]);
+			}
+			return x;
 		}
-		function devise( x,  y) {
-			return x/y;
+		function devise(tabNbParam) {
+			var x=0;
+			for (var i=0; i< n ; i++){
+				x += parseFloat(tabNbParam[i]);
+			}
+			return x;
 		}
-		function calculator( x,  y) {
-			console.log(x + " + " , y + " = " + add( x, y));
-			console.log(x + " - " + y + " = " + minus( x, y));
-			console.log(x + " * " + y + " = " + multiply( x, y));
-			console.log(x + " / " + y + " = " + devise( x, y));
+		function calculator(tabNbParam) {
+			console.log("L'addition de tous les nombre données :" + add(tabNbParam));
+			console.log("Soustraction de tous les nombre données :" + minus(tabNbParam));
+			console.log("La multiplication de tous les nombre données :" + multiply(tabNbParam));
+			console.log("La division  de tous les nombre données :" + devise(tabNbParam));
 		}
-		calculator(a, b);
+		calculator(tabNbParam);
 	</script>
 </body>
 </html>
