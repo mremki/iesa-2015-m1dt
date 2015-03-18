@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;; charset=utf-8" />
+	<title>Calculator</title>
+	<meta></meta>
+</head>
+<body>
+	<script>
+		var a = prompt('Donnez la valeur de X');
+		var b = prompt('Donnez la valeur de Y');
+		
+		function add( x, y) {
+			return parseFloat(x)+parseFloat(y);
+		}
+		function minus( x,  y) {
+			return x-y;
+		}
+		function multiply( x,  y) {
+			return x*y;
+		}
+		function devise( x,  y) {
+			return x/y;
+		}
+		function calculator( x,  y) {
+			console.log(x + " + " , y + " = " + add( x, y));
+			console.log(x + " - " + y + " = " + minus( x, y));
+			console.log(x + " * " + y + " = " + multiply( x, y));
+			console.log(x + " / " + y + " = " + devise( x, y));
+		}
+		calculator(a, b);
+	</script>
+</body>
+</html>
