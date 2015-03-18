@@ -7,15 +7,13 @@
 </head>
 <body>
 	<script width="1100" height="1500">
-		var age=20;
+		var age=10;
 		var hasBasket = 0;
-		if( hasBasket > 0 ) {
-			alert("Mets des chaussures et reviens");;
-		} else if( 18 > age ) {
+		if( hasBasket < 0 || 18 > age ) {
 		  alert("Non ça sera pas possible !");;
-		} else if (22 > age){
+		} else if (hasBasket == 0 && age < 22){
 		  alert("Montrez moi vos papiers !");;
-		} else {
+		} else if (hasBasket == 0 && age > 22){
 		  alert("Vous pouvez rentrer !");;
 		}
 
