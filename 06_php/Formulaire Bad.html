@@ -2,21 +2,25 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Formulaire Bad</title>
+	<title>Formulaire</title>
 	<meta></meta>
 </head>
 <body>
-	<FORM>
-	 Donnez votre prénom, puis validez :
-	<INPUT TYPE=text NAME=prenom>
-	<INPUT TYPE=text NAME=nom>
-	<INPUT TYPE=submit VALUE="Valider">
-	</FORM>
-	<P>
-	 Vous vous appelez
 	<?php
-	  echo "$nom";
-	  echo "$prenom";
+		 echo $date = date("d-m-Y"); 
+	 ;?>
+
+	<form method ="post" action="form.php">
+		<p>Prénom : <input type="text" name="prenom"/></p>
+		<p>Nom : <input type="text" name="nom"/><p/>
+		<input type="submit" value="Envoyer"/>
+	</form>
+	<?php
+		if($_GET){
+			 echo $_GET['prenom'].$_GET['nom'];
+		}
+		else{
+		}
 	?>
 </body>
 </html>
