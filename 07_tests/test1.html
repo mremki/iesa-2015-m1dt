@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Test QUnitJs</title>
+	<meta></meta>
+	<link rel="stylesheet" href="qunit-1.17.1.css">
+	<script src="qunit-1.17.1.js"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+	<script>
+		QUnit.test("Equalité", 
+					function (assert1) { 	
+					assert1.equal (1,1,"1 expected");
+					});
+		QUnit.test("Inégalité", 
+					function (assert1) { 	
+					assert1.notEqual (1,10,"1 expected");
+					});
+	</script>
+</body>
+</html>
