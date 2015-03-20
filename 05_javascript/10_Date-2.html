@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;; charset=utf-8" />
+	<title>Date-2</title>
+	<meta></meta>
+</head>
+<body>
+	<script>
+		var date1 = new Date();
+		//var date2 = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+		var date2 = new Date(2050, 14, 44, 18, 56, 0, 0);
+		console.log("1. Créer deux dates :");
+		console.log("Une sans parametre : ", date1);
+		console.log("Deuxieme avec parametre : ", date2);
+		
+		
+		console.log("2. Afficher les détails :");
+		console.log(date1);
+		console.debug("getDay :" , date1.getDay());
+		console.debug("getMonth :" , date1.getMonth()+1);
+		console.debug("getFullYear :" , date1.getFullYear());
+		console.debug("getDate :" , date1.getDate());
+		console.debug("getHours + getMinutes :" , date1.getHours(), date1.getMinutes());
+		
+		console.log("3. Modifier les détails : ");
+		date1.setDate(25);
+		date1.setFullYear(2055);
+		date1.setMonth(10+4); // Il va rajouter une année
+		date1.setHours(18);
+		date1.setMinutes(00);
+		console.log(date1);
+		
+		console.log("4. Comparer les deux dates : ");
+		if (date1.getTime() < date2.getTime()) {
+			console.log(date1, " est plus proche que la date ",date2);
+		} else {
+			console.log(date2, " est plus proche que la date ",date1);
+		}
+
+		var date3 = new Date(2035, 2, 22, 18, 56, 0, 0);
+		var date4 = new Date(2034, 14, 22, 00, 00, 0, 0);
+		
+		var date3trim = date3.getDay() + "" + date3.getMonth() + "" + date3.getFullYear();
+		var date4trim = date4.getDay() + "" + date4.getMonth() + "" + date4.getFullYear();
+		
+		if (date3trim  === date4trim ) {
+			console.log(date3, " et ",date4, " sont au meme jour");
+		} else {
+			console.log(date3, " et ",date4, " ne sont pas au meme jour");
+		}
+		
+		
+	</script>
+</body>
+</html>
