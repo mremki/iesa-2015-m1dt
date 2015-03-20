@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Formulaire</title>
+	<meta></meta>
+</head>
+<body>
+	<form name="inscription" method="post" action="action.php">
+        Entrez votre nom : <input type="text" name="nom"/> <br/>
+        Entrez votre prenom : <input type="text" name="prenom"/><br/>
+        <input type="submit" name="valider" value="OK"/>
+    </form>
+	<FORM>
+	<?php 
+	$age=$_POST['prenom']; 
+	echo $age;
+	?>
+</body>
+</html>

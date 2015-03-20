@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Formulaire Bad</title>
+	<meta></meta>
+</head>
+<body>
+	<FORM>
+	 Donnez votre prénom, puis validez :
+	<INPUT TYPE=text NAME=prenom>
+	<INPUT TYPE=text NAME=nom>
+	<INPUT TYPE=submit VALUE="Valider">
+	</FORM>
+	<P>
+	 Vous vous appelez
+	<?php
+	  echo "$nom";
+	  echo "$prenom";
+	?>
+</body>
+</html>
