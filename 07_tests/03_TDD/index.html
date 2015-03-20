@@ -12,60 +12,23 @@
 	<div id="qunit-fixture"></div>
 	<script>
 				/************* Test ****************/
-		var tab = [3,2,1];
+		var a = 3;
+		var b = 3;
+		
 		QUnit.test("Fonction Add", 
 					function (tmp) { 	
-					tmp.equal (add(tab),3+2+1,console.log("L'addition de tous les nombre données :" + add(tabNbParam)))
+					tmp.equal (add(3, 3),6,"Succeed")
+					tmp.equal (add(2, 3),5,"Succeed")
+					tmp.ok (isNaN(add(2)),"Succeed")
+					tmp.ok (isNaN(add(2, "test")),"Succeed")
 					});
 
 				/************* Test ****************/
 	
-	
-		var n = prompt('Combien de parametre voulez vous ?');
-		var tabNbParam=new Array;
-		for (var i=1; i<=n ; i++){
-			tabNbParam[i-1] = prompt('Donnez la valeur ' + i);
+		function add (a, b){
+			var total = a + b; 
+			return total;
 		}
-		
-		function add(tabNbParam) {
-			var x=0;
-			for (var i=0; i< tabNbParam.length ; i++){
-				x += parseFloat(tabNbParam[i]);
-			}
-			return x;
-		}
-		function minus(tabNbParam) {
-			var x=tabNbParam[0];
-			for (var i=1; i< tabNbParam.length ; i++){
-				x -= parseInt(tabNbParam[i]);
-			}
-			return x;
-		}
-		function multiply(tabNbParam) {
-			var x=tabNbParam[0];
-			for (var i=1; i< tabNbParam.length ; i++){
-				x *= parseFloat(tabNbParam[i]);
-			}
-			return x;
-		}
-		function devise(tabNbParam) {
-			var x=tabNbParam[0];
-			for (var i=1; i< tabNbParam.length ; i++){
-				x /= parseFloat(tabNbParam[i]);
-			}
-			return x;
-		}
-		
-		function calculator(tabNbParam) {
-			console.log("L'addition de tous les nombre données :" + add(tabNbParam));
-			console.log("Soustraction de tous les nombre données :" + minus(tabNbParam));
-			console.log("La multiplication de tous les nombre données :" + multiply(tabNbParam));
-			console.log("La division  de tous les nombre données :" + devise(tabNbParam));
-		}
-		calculator(tabNbParam);
-		
-
-		
 		
 		
 		
