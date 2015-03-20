@@ -4,8 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html;; charset=utf-8" />
 	<title>Calculator+Test</title>
 	<meta></meta>
+	<link rel="stylesheet" href="qunit-1.17.1.css">
+	<script src="qunit-1.17.1.js"></script>
 </head>
 <body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
 	<script>
 		var n = prompt('Combien de parametre voulez vous ?');
 		var tabNbParam=new Array;
@@ -49,6 +53,32 @@
 			console.log("La division  de tous les nombre données :" + devise(tabNbParam));
 		}
 		calculator(tabNbParam);
+		
+				/************* Test Unitaire ****************/
+		var tab = [3,2,1];
+
+		
+		QUnit.test("Fonction Add", 
+					function (tmp) { 	
+					tmp.equal (add(tab),6,console.log("L'addition de tous les nombre données :" + add(tabNbParam)));
+					});
+		QUnit.test("Fonction Minus", 
+					function (tmp) { 	
+					tmp.equal (minus(tab),0,console.log("Soustraction de tous les nombre données :" + minus(tabNbParam)));
+					});
+		QUnit.test("Fonction Multiply", 
+					function (tmp) { 	
+					tmp.equal (multiply(tab),6,console.log("La multiplication de tous les nombre données :" + multiply(tabNbParam)));
+					});
+		QUnit.test("Fonction Devise", 
+					function (tmp) { 	
+					tmp.equal (devise(tab),1.5,console.log("La division  de tous les nombre données :" + devise(tabNbParam)));
+					});
+				/************* Test Unitaire ****************/
+		
+		
+		
+		
 	</script>
 </body>
 </html>
