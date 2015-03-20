@@ -9,3 +9,6 @@ Cours Programmation
 Toutes les variables sont déclarées avec "var". C'est lors de l'affectation que les variables prennent un "Type".<br>
 Une variable peut changer de Type plusieurs fois dans un seul programme.<br>
 Difference entre i++ et ++i.
+
+#PHP
+Toujours vérifier qu'on travaille via le Serveur WAMP et non pas en LOCAL !! 
