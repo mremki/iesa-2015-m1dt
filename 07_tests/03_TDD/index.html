@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-	<meta http-equiv="refresh" content="5">
-	<title>Calculator Test Unitaire</title>
+	<meta http-equiv="Content-Type" content="text/html;; charset=utf-8" />
+	<title>Calculator+ TDD</title>
 	<link rel="stylesheet" href="qunit-1.17.1.css">
 	<script src="qunit-1.17.1.js"></script>
 </head>
@@ -11,6 +11,16 @@
 	<div id="qunit"></div>
 	<div id="qunit-fixture"></div>
 	<script>
+				/************* Test ****************/
+		var tab = [3,2,1];
+		QUnit.test("Fonction Add", 
+					function (tmp) { 	
+					tmp.equal (add(tab),3+2+1,console.log("L'addition de tous les nombre données :" + add(tabNbParam)))
+					});
+
+				/************* Test ****************/
+	
+	
 		var n = prompt('Combien de parametre voulez vous ?');
 		var tabNbParam=new Array;
 		for (var i=1; i<=n ; i++){
@@ -54,27 +64,7 @@
 		}
 		calculator(tabNbParam);
 		
-				/************* Test Unitaire ****************/
-		var tab = [3,2,1];
 
-		
-		QUnit.test("Fonction Add", 
-					function (tmp) { 	
-					tmp.equal (add(tab),6,console.log("L'addition de tous les nombre données :" + add(tabNbParam)))
-					});
-		QUnit.test("Fonction Minus", 
-					function (tmp) { 	
-					tmp.equal (minus(tab),0,console.log("Soustraction de tous les nombre données :" + minus(tabNbParam)))
-					});
-		QUnit.test("Fonction Multiply", 
-					function (tmp) { 	
-					tmp.equal (multiply(tab),6,console.log("La multiplication de tous les nombre données :" + multiply(tabNbParam)))
-					});
-		QUnit.test("Fonction Devise", 
-					function (tmp) { 	
-					tmp.equal (devise(tab),1.5,console.log("La division  de tous les nombre données :" + devise(tabNbParam)))
-					});
-				/************* Test Unitaire ****************/
 		
 		
 		
